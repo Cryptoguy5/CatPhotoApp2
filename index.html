@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>CatPhotoApp</title>
+      
+    <style>
+        body {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 100vw;
+          height: 100%;
+          background-color: #0081a7;
+          }
+
+       .cat-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+       }
+
+      div {
+        background-color: #fdfcdc;
+        border: 5px solid #00afb9;
+      }
+      
+      section {
+        background-color: #eed7c5;
+        border: 5px solid #00afb9;
+        margin: 5px;
+        
+      }
+
+      h1, h2 {
+        background-color: #fed9b7;
+      border: 5px solid #00afb9;
+      }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    li {
+      text-align: center;
+      background-color: #fed9b7;
+      margin-bottom: 2px;
+    }
+
+    img {
+      height: 300px;
+    }
+
+    .center {
+      text-align: center;
+     font-weight: bold;
+    }
+
+    @media (max-width: 680px) {
+      body {
+          display: block;
+          width: 100vw;
+          height: 100%;
+        }
+
+        .cat-list {
+        display: inline;
+        width: 100%
+         }
+
+         img {
+          width: 95%;
+         }
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+      <h1>CatPhotoApp</h1>
+      <section>
+       <div>
+        <h2>Cat Photos</h2>
+        <!-- TODO: Add link to cat photos -->
+        <p class="center">See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+       <img src="./Cat photo.webp" alt="cat photo">
+       <img src="./Cat photo 2.jpeg" alt="cat photo 2">
+      </div>
+      </section>
+      <section>
+       <div>
+        <div width="100%">
+          <h2>Cat Lists</h2>
+        </div>
+        <div class="cat-list">
+        <div >
+        <h3>Things cats love:</h3>
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+        </figure>
+      </div>
+        <div>
+       <h3>Top 3 things cats hate:</h3>
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+         </figure>
+        </div>
+       </div>
+      </div>
+      </section>
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    <section>
+    <footer>
+      <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </section>
+    </main>
+  </body>
+</html>
